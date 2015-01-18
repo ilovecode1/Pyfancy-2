@@ -110,6 +110,6 @@ This was only tested in the mac terminal may not work with some systems and hard
 
 ## This documentation is put in the program type: 
 
-'''python
+```python
 documentation()
-'''
+```
