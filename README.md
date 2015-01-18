@@ -107,3 +107,9 @@ print (pyfancy.INVISABLE + "Hello Invisable!" + pyfancy.END)
 ## Warning!
 
 This was only tested in the mac terminal may not work with some systems and hardware!
+
+## This documentation is put in the program type: 
+
+'''python
+documentation()
+'''
