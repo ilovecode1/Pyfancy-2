@@ -1,6 +1,6 @@
 #Pyfancy 0.2.5 by Cosmic Open Source Projects learn more at https://github.com/ilovecode1/pyfancy
 
-documentation = print("Type documentation() for help or go to https://github.com/ilovecode1/pyfancy!")
+documentation = ("Type documentation() for help or go to https://github.com/ilovecode1/pyfancy!")
 
 def documentation(input=None):
 	
