@@ -1,4 +1,4 @@
-#Pyfancy 0.2.5 by Cosmic Open Source Projects learn more at https://github.com/ilovecode1/pyfancy
+#Pyfancy 0.3.5 by Cosmic Open Source Projects learn more at https://github.com/ilovecode1/pyfancy
 
 documentation = ("Type documentation() for help or go to https://github.com/ilovecode1/pyfancy!")
 
@@ -13,9 +13,13 @@ def documentation(input=None):
     	print(input + " is not avalible!")
 
 class pyfancy:
-
-	END = '\033[0m'
-	PURPLE='\033[35m'
+        
+	END='\033[0m'
+	INVISABLE2='\033[02m'
+	PURPLEBLUE='\033[34m'
+	WHITETEXTBLACKBACKROUND='\033[07m'
+        MISTGREY='\033[20m'
+        PURPLE='\033[35m'
         CYAN='\033[36m'
         LIGHTGREY='\033[37m'
         DARKGREY='\033[90m'
