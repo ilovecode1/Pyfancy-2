@@ -2,6 +2,30 @@ We are making any python program colorful (in the terminal only) the simple way!
 
 ## Docs
 
+#WHITETEXTBLACKBACKROUND
+
+```python
+print (pyfancy.WHITETEXTBLACKBACKROUND + "Hello White Text Black Backround!" + pyfancy.END)
+```
+
+#MISTGREY
+
+```python
+print (pyfancy.MISTGREY + "Hello Mist Grey!" + pyfancy.END)
+```
+
+#INVISABLE2
+
+```python
+print (pyfancy.INVISABLE2 + "Hello Invisable 2!" + pyfancy.END)
+```
+
+#PURPLEBLUE
+
+```python
+print (pyfancy.PURPLEBLUE + "Hello Purple-Blue!" + pyfancy.END)
+```
+
 #BLUE
 
 ```python
