@@ -139,3 +139,9 @@ This documentation is put in the program type:
 ```python
 documentation()
 ```
+
+#Importing
+
+```python
+from pyfancy import *
+```
