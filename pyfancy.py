@@ -1,4 +1,4 @@
-#Pyfancy 0.3.6 by Cosmic Open Source Projects learn more at https://github.com/ilovecode1/pyfancy
+#Pyfancy 0.4 by Cosmic Open Source Projects learn more at https://github.com/ilovecode1/pyfancy
 
 documentation = ("Type documentation() for help or go to https://github.com/ilovecode1/pyfancy!")
 
