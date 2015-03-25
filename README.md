@@ -1,3 +1,5 @@
+FINALY A NEW VERSION! SORRY FOR THE WAIT!
+
 We are making any python program colorful (in the terminal only) the simple way!
 
 ## Docs
