@@ -1,10 +1,12 @@
-##v0.5
-
-Pyfancy is smarter if the user is not using the Terminal but, is using IDLE it will erase the values of the varibles so it will not cause bugs!
-
 We are making any python program colorful (in the terminal only) the simple way!
 
 ## Docs
+
+#random()
+
+```python
+print (pyfancy.random() + "Hello Random!" + pyfancy.END)
+```
 
 #WHITETEXTBLACKBACKROUND
 
