@@ -1,4 +1,4 @@
-#Pyfancy 0.5 by Cosmic Open Source Projects learn more at https://github.com/ilovecode1/pyfancy
+#Pyfancy 0.7 by Cosmic Open Source Projects learn more at https://github.com/ilovecode1/pyfancy
 
 import sys
 
@@ -35,6 +35,7 @@ def documentation(input=None):
 class pyfancy:
         
         if (get):
+        	
 		END=''
 		INVISABLE2=''
 		PURPLEBLUE=''
@@ -59,6 +60,7 @@ class pyfancy:
 	        INVISABLE=''
         	
         else:
+        	
 		END='\033[0m'
 		INVISABLE2='\033[02m'
 		PURPLEBLUE='\033[34m'
@@ -81,7 +83,125 @@ class pyfancy:
 		REVERSE='\033[07m'
 	        STRIKETHROUGH='\033[09m'
 	        INVISABLE='\033[08m'
-        
+	        
+        def random():
+        	
+        	from random import randint
+        	
+            	if (get):
+        		
+        		return
+        	
+        	else:
+        	    
+			INVISABLE2='\033[02m'
+			PURPLEBLUE='\033[34m'
+			WHITETEXTBLACKBACKROUND='\033[07m'
+		        MISTGREY='\033[20m'
+		        PURPLE='\033[35m'
+		        CYAN='\033[36m'
+		        LIGHTGREY='\033[37m'
+		        DARKGREY='\033[90m'
+		        LIGHTRED='\033[91m'
+		        LIGHTGREEN='\033[92m'
+		        LIGHTBLUE='\033[94m'
+		        PINK='\033[95m'
+			BLUE = '\033[94m'
+			GREEN = '\033[92m'
+			YELLOW = '\033[93m'
+			RED = '\033[91m'
+			BOLD = '\033[1m'
+			UNDERLINE = '\033[4m'
+			REVERSE='\033[07m'
+		        STRIKETHROUGH='\033[09m'
+		        INVISABLE='\033[08m'
+		        
+		        rand = randint(1,21)
+		        
+		        if (rand == 1):
+		        	
+		        	return INVISABLE2
+		        	
+		        if (rand == 2):
+		        	
+		        	return PURPLEBLUE
+		        	
+		        if (rand == 3):
+		        	
+		        	return WHITETEXTBLACKBACKROUND
+		        	
+		        if (rand == 4):
+		        	
+		        	return MISTGREY
+		        	
+		        if (rand == 5):
+		        	
+		        	return PURPLE
+		        	
+		        if (rand == 6):
+		        	
+		        	return CYAN
+		        	
+		        if (rand == 7):
+		        	
+		        	return LIGHTGREY
+		        	
+		        if (rand == 8):
+		        	
+		        	return DARKGREY
+		        	
+		        if (rand == 9):
+		        	
+		        	return LIGHTRED
+		        	
+		        if (rand == 10):
+		        	
+		        	return LIGHTGREEN
+		        	
+		        if (rand == 11):
+		        	
+		        	return LIGHTBLUE
+		        	
+		        if (rand == 12):
+		        	
+		        	return PINK
+		        	
+		        if (rand == 13):
+		        	
+		        	return BLUE
+		        	
+		        if (rand == 14):
+		        	
+		        	return GREEN
+		        	
+		        if (rand == 15):
+		        	
+		        	return YELLOW
+		        	
+		        if (rand == 16):
+		        	
+		        	return RED
+		        	
+		        if (rand == 17):
+		        	
+		        	return BOLD
+		        	
+		        if (rand == 18):
+		        	
+		        	return UNDERLINE
+		        	
+		        if (rand == 19):
+		        	
+		        	return REVERSE
+		        	
+		        if (rand == 20):
+		        	
+		        	return STRIKETHROUGH
+		        	
+        		if (rand == 21):
+        			
+        			return INVISABLE
+        		
         
 def demo():
 	print(pyfancy.RED + "HELLO RED!" + pyfancy.END)
