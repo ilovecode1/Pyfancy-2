@@ -1,4 +1,6 @@
-FINALY A NEW VERSION! SORRY FOR THE WAIT!
+#v0.7.5
+
+Small Fix!
 
 We are making any python program colorful (in the terminal only) the simple way!
 
