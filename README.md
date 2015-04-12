@@ -1,8 +1,8 @@
 We know that the code is not the best but, it works soon we will clean it up!
 
-#v0.7.5
+#v0.8
 
-Small Fix!
+Used autoprep8 (https://pypi.python.org/pypi/autopep8) to clean up code!
 
 We are making any python program colorful (in the terminal only) the simple way!
 
