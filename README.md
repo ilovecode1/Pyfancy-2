@@ -1,4 +1,7 @@
-We know that the code is not the best but, it works soon we will clean it up!
+Ideas for v1.0:
+
+1. More Colors
+2. Better Code
 
 #v0.8
 
