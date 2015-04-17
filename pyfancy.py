@@ -1,5 +1,5 @@
 # Pyfancy 0.8 by Cosmic Open Source Projects learn more at
-# https://github.com/ilovecode1/pyfancy
+# https://github.com/ilovecode1/pyfancy!
 
 import sys
 
