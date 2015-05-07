@@ -1,7 +1,6 @@
-Ideas for v1.0:
+#Update
 
-1. More Colors
-2. Better Code
+Just an update V0.8 is being worked on and it's looking great! Expect More Colors!
 
 #v0.8
 
