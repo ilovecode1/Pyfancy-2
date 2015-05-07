@@ -1,14 +1,23 @@
-#Update
+#0.9
 
-Just an update V0.8 is being worked on and it's looking great! Expect More Colors!
-
-#v0.8
-
-Used autoprep8 (https://pypi.python.org/pypi/autopep8) to clean up code!
+1. 2 new colors
+2. Removed documentation() replaced it with ```documentation```!
 
 We are making any python program colorful (in the terminal only) the simple way!
 
 ## Docs
+
+#BLINK
+
+```python
+print(pyfancy.BLINK + "Hello Blink!" + pyfancy.END)
+```
+
+#BLACKTEXTGREYBACKGROUND
+
+```python
+print(pyfancy.BLACKTEXTGREYBACKGROUND + "Hello BLack Text Grey Background!" + pyfancy.END)
+```
 
 #random()
 
@@ -146,13 +155,6 @@ print (pyfancy.INVISABLE + "Hello Invisable!" + pyfancy.END)
 
 This was only tested in the mac terminal may not work with some systems and hardware!
 
-## other
-
-This documentation is put in the program type: 
-
-```python
-documentation()
-```
 
 #Importing
 
