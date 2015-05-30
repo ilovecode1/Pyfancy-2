@@ -2,6 +2,10 @@
 
 Suggest what you want for v1.0!
 
+#0.9.2
+
+1. Comments!
+
 #0.9
 
 1. 2 new colors
