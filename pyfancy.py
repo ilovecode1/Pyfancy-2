@@ -1,10 +1,8 @@
 # Pyfancy 0.9 by Cosmic Open Source Projects learn more at
 # https://github.com/ilovecode1/pyfancy!
+import sys #Import SYS
 
-import sys
-
-
-def idleorcommandline():
+def idleorcommandline():#This is from Pylaunch API
     'If idleorcommandline returns True its IDLE if False its command line!'
     a = sys.executable
     m = '\\\\'
@@ -16,20 +14,20 @@ def idleorcommandline():
             break
         a = a[:(b - 1)]
     if sys.executable == a + 'pythonw.exe':
-        return True
+        return True#IDE
     else:
-        return False
-
+        return False#CMD
+        
 get = idleorcommandline()
 
-documentation = print("For help go to https://github.com/ilovecode1/pyfancy!")
+documentation = print("For help go to https://github.com/ilovecode1/pyfancy!")#Docs
 
+class pyfancy:#Our Class
 
-
-class pyfancy:
-
-    if (get):
-
+    if (get):#IDE
+        
+        #Remove Values in Varibles
+        
         END = ''
         BLINK = ''
         INVISABLE2 = ''
@@ -55,7 +53,7 @@ class pyfancy:
         INVISABLE = ''
         BLACKTEXTGREYBACKGROUND=''
 
-    else:
+    else:#It's ok to turn on varibles
 
         END = '\033[0m'
         BLINK = '\033[05m'
@@ -82,15 +80,15 @@ class pyfancy:
         STRIKETHROUGH = '\033[09m'
         INVISABLE = '\033[08m'
 
-    def random():
+    def random():#Random Collor
 
-        from random import randint
+        from random import randint#Get Random
 
-        if (get):
+        if (get):#Turn Off Varibles!
 
             return
 
-        else:
+        else:#Turn On Varibles
             
             BLINK = '\033[05m'
             INVISABLE2 = '\033[02m'
@@ -115,8 +113,10 @@ class pyfancy:
             STRIKETHROUGH = '\033[09m'
             INVISABLE = '\033[08m'
 
-            rand = randint(1, 21)
-
+            rand = randint(1, 21)#Random Varible
+            
+            #Set
+            
             if (rand == 1):
 
                 return INVISABLE2
@@ -202,5 +202,5 @@ class pyfancy:
                 return INVISABLE
 
 
-def demo():
+def demo():#Quick Demo!
     print(pyfancy.RED + "HELLO RED!" + pyfancy.END)
