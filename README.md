@@ -151,13 +151,10 @@ print (pyfancy.STRIKETHOUGH + "Hello Strikethough!" + pyfancy.END)
 print (pyfancy.INVISABLE + "Hello Invisable!" + pyfancy.END)
 ```
 
-## Warning!
+#Quick Start
 
-This was only tested in the mac terminal may not work with some systems and hardware!
-
-
-#Importing
-
-```python
-from pyfancy import *
-```
+1. ```git clone https://github.com/ilovecode1/pyfancy.git```
+2. ```cd pyfancy```
+3. ```python```
+4. ```from pyfancy import *```
+5. Code!
