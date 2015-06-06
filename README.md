@@ -2,6 +2,13 @@
 
 Suggest what you want for v1.0!
 
+#0.9.6
+
+1. Faster
+2. Better Code
+3. Runs Better On More Systems
+4. Less Code
+
 #0.9.2
 
 1. Comments!
