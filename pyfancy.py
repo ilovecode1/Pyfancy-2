@@ -1,33 +1,40 @@
-# Pyfancy 0.9 by Cosmic Open Source Projects learn more at
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+# Pyfancy 0.9.6 by Cosmic Open Source Projects learn more at
 # https://github.com/ilovecode1/pyfancy!
-import sys #Import SYS
 
-def idleorcommandline():#This is from Pylaunch API
-    'If idleorcommandline returns True its IDLE if False its command line!'
+import sys  # Import SYS
+
+
+def idleorcommandline():  # This is from Pylaunch API
+    '''If idleorcommandline returns True its IDLE if False its command line!'''
+
     a = sys.executable
     m = '\\\\'
     m = m[0]
     while True:
         b = len(a)
-        c = a[(b - 1)]
+        c = a[b - 1]
         if c == m:
             break
-        a = a[:(b - 1)]
+        a = a[:b - 1]
     if sys.executable == a + 'pythonw.exe':
-        return True#IDE
+        return True  # IDE
     else:
-        return False#CMD
-        
+        return False  # CMD
+
+
 get = idleorcommandline()
 
-documentation = print("For help go to https://github.com/ilovecode1/pyfancy!")#Docs
+documentation = 'For help go to https://github.com/ilovecode1/pyfancy!'  # Docs
 
-class pyfancy:#Our Class
 
-    if (get):#IDE
-        
-        #Remove Values in Varibles
-        
+class pyfancy:  # Our Class
+
+    if get:  # IDE
+
+        # Remove Values in Varibles
+
         END = ''
         BLINK = ''
         INVISABLE2 = ''
@@ -51,9 +58,10 @@ class pyfancy:#Our Class
         REVERSE = ''
         STRIKETHROUGH = ''
         INVISABLE = ''
-        BLACKTEXTGREYBACKGROUND=''
+        BLACKTEXTGREYBACKGROUND = ''
+    else:
 
-    else:#It's ok to turn on varibles
+         # It's ok to turn on varibles
 
         END = '\033[0m'
         BLINK = '\033[05m'
@@ -80,16 +88,17 @@ class pyfancy:#Our Class
         STRIKETHROUGH = '\033[09m'
         INVISABLE = '\033[08m'
 
-    def random():#Random Collor
+    def random():  # Random Collor
 
-        from random import randint#Get Random
+        from random import randint  # Get Random
 
-        if (get):#Turn Off Varibles!
+        if get:  # Turn Off Varibles!
 
             return
+        else:
 
-        else:#Turn On Varibles
-            
+             # Turn On Varibles
+
             BLINK = '\033[05m'
             INVISABLE2 = '\033[02m'
             PURPLEBLUE = '\033[34m'
@@ -113,94 +122,94 @@ class pyfancy:#Our Class
             STRIKETHROUGH = '\033[09m'
             INVISABLE = '\033[08m'
 
-            rand = randint(1, 21)#Random Varible
-            
-            #Set
-            
-            if (rand == 1):
+            rand = randint(1, 21)  # Random Varible
+
+            # Set
+
+            if rand == 1:
 
                 return INVISABLE2
 
-            if (rand == 2):
+            if rand == 2:
 
                 return PURPLEBLUE
 
-            if (rand == 3):
+            if rand == 3:
 
                 return WHITETEXTBLACKBACKROUND
 
-            if (rand == 4):
+            if rand == 4:
 
                 return MISTGREY
 
-            if (rand == 5):
+            if rand == 5:
 
                 return PURPLE
 
-            if (rand == 6):
+            if rand == 6:
 
                 return CYAN
 
-            if (rand == 7):
+            if rand == 7:
 
                 return LIGHTGREY
 
-            if (rand == 8):
+            if rand == 8:
 
                 return DARKGREY
 
-            if (rand == 9):
+            if rand == 9:
 
                 return LIGHTRED
 
-            if (rand == 10):
+            if rand == 10:
 
                 return LIGHTGREEN
 
-            if (rand == 11):
+            if rand == 11:
 
                 return LIGHTBLUE
 
-            if (rand == 12):
+            if rand == 12:
 
                 return PINK
 
-            if (rand == 13):
+            if rand == 13:
 
                 return BLUE
 
-            if (rand == 14):
+            if rand == 14:
 
                 return GREEN
 
-            if (rand == 15):
+            if rand == 15:
 
                 return YELLOW
 
-            if (rand == 16):
+            if rand == 16:
 
                 return RED
 
-            if (rand == 17):
+            if rand == 17:
 
                 return BOLD
 
-            if (rand == 18):
+            if rand == 18:
 
                 return UNDERLINE
 
-            if (rand == 19):
+            if rand == 19:
 
                 return REVERSE
 
-            if (rand == 20):
+            if rand == 20:
 
                 return STRIKETHROUGH
 
-            if (rand == 21):
+            if rand == 21:
 
                 return INVISABLE
 
 
-def demo():#Quick Demo!
-    print(pyfancy.RED + "HELLO RED!" + pyfancy.END)
+def demo():  # Quick Demo!
+    print pyfancy.RED + 'HELLO RED!' + pyfancy.END
