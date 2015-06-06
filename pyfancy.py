@@ -212,4 +212,4 @@ class pyfancy:  # Our Class
 
 
 def demo():  # Quick Demo!
-    print pyfancy.RED + 'HELLO RED!' + pyfancy.END
+    print (pyfancy.RED + 'HELLO RED!' + pyfancy.END)
