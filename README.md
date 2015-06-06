@@ -172,4 +172,4 @@ print (pyfancy.INVISABLE + "Hello Invisable!" + pyfancy.END)
 2. ```cd pyfancy```
 3. ```python```
 4. ```from pyfancy import *```
-5. Code!
+5. ```demo()```
