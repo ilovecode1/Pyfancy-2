@@ -1,6 +1,16 @@
-#1.0
+#FAQ
 
-Suggest what you want for v1.0!
+Q. What is pyfancy?
+
+A. Pyfancy is a python module to simplify printing colors in the terminal.
+
+Q. How does it work?
+
+A. If you look in the code you have the class pyfancy in it are weird things that look like ```\033[0m``` that is unicode that makes the color when added to a string.
+
+Q. How do I set it up?
+
+A. Look at the instructions here at https://github.com/ilovecode1/pyfancy#quick-start
 
 #0.9.6
 
