@@ -1,3 +1,5 @@
+[![PyPI](https://img.shields.io/pypi/dw/Django.svg)](https://github.com/ilovecode1/pyfancy)
+
 Please Help Us By Forking!!!!
 
 #FAQ
