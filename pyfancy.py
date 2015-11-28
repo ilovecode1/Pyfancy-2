@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Pyfancy 0.9.6 by Cosmic Open Source Projects learn more at
+# Pyfancy 1.0.0 by Cosmic Open Source Projects learn more at
 # https://github.com/ilovecode1/pyfancy!
 
 import sys  # Import SYS
@@ -30,7 +30,8 @@ documentation = 'For help go to https://github.com/ilovecode1/pyfancy!'  # Docs
 
 
 class pyfancy:  # Our Class
-
+    
+    version = "1.0.0"
     if get:  # IDE
 
         # Remove Values in Varibles
@@ -213,3 +214,9 @@ class pyfancy:  # Our Class
 
 def demo():  # Quick Demo!
     print (pyfancy.RED + 'HELLO RED!' + pyfancy.END)
+    
+if __name__ == "__main__":
+    print("Welcome to Pyfancy!")
+    demo()
+else:
+    print("")
