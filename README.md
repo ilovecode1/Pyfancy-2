@@ -1,6 +1,4 @@
-
-
-Please Help Us By Forking!!!!
+V1 IS OUT!
 
 #FAQ
 
@@ -15,6 +13,10 @@ A. If you look in the code you have the class pyfancy in it are weird things tha
 Q. How do I set it up?
 
 A. Look at the instructions here at https://github.com/ilovecode1/pyfancy#quick-start
+
+#1.0.0
+
+Finishing Touches!
 
 #0.9.6
 
