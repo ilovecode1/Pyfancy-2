@@ -1,4 +1,4 @@
-V1 IS OUT!
+We know about the issues some people where facing with Pyfancy and they will be fixed soon! Expect an update next week.
 
 #FAQ
 
