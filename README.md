@@ -1,3 +1,4 @@
+*New!* New Site: http://pyfancy.strikingly.com/
 *New!* Pyfancy Simple that does not have random() or IDE Detection!
 
 #FAQ
