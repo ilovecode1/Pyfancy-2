@@ -38,7 +38,7 @@ class pyfancy:  # Our Class
 
         END = ''
         BLINK = ''
-        INVISABLE2 = ''
+        INVISIBLE2 = ''
         PURPLEBLUE = ''
         WHITETEXTBLACKBACKROUND = ''
         MISTGREY = ''
@@ -58,7 +58,7 @@ class pyfancy:  # Our Class
         UNDERLINE = ''
         REVERSE = ''
         STRIKETHROUGH = ''
-        INVISABLE = ''
+        INVISIBLE = ''
         BLACKTEXTGREYBACKGROUND = ''
     else:
 
@@ -67,7 +67,7 @@ class pyfancy:  # Our Class
         END = '\033[0m'
         BLINK = '\033[05m'
         BLACKTEXTGREYBACKGROUND = '\033[100m'
-        INVISABLE2 = '\033[02m'
+        INVISIBLE2 = '\033[02m'
         PURPLEBLUE = '\033[34m'
         WHITETEXTBLACKBACKROUND = '\033[07m'
         MISTGREY = '\033[20m'
@@ -87,7 +87,7 @@ class pyfancy:  # Our Class
         UNDERLINE = '\033[4m'
         REVERSE = '\033[07m'
         STRIKETHROUGH = '\033[09m'
-        INVISABLE = '\033[08m'
+        INVISIBLE = '\033[08m'
 
     def random():  # Random Collor
 
@@ -101,7 +101,7 @@ class pyfancy:  # Our Class
              # Turn On Varibles
 
             BLINK = '\033[05m'
-            INVISABLE2 = '\033[02m'
+            INVISIBLE2 = '\033[02m'
             PURPLEBLUE = '\033[34m'
             WHITETEXTBLACKBACKROUND = '\033[07m'
             MISTGREY = '\033[20m'
@@ -121,7 +121,7 @@ class pyfancy:  # Our Class
             UNDERLINE = '\033[4m'
             REVERSE = '\033[07m'
             STRIKETHROUGH = '\033[09m'
-            INVISABLE = '\033[08m'
+            INVISIBLE = '\033[08m'
 
             rand = randint(1, 21)  # Random Varible
 
@@ -129,7 +129,7 @@ class pyfancy:  # Our Class
 
             if rand == 1:
 
-                return INVISABLE2
+                return INVISIBLE2
 
             if rand == 2:
 
@@ -209,7 +209,7 @@ class pyfancy:  # Our Class
 
             if rand == 21:
 
-                return INVISABLE
+                return INVISIBLE
 
 
 def demo():  # Quick Demo!
