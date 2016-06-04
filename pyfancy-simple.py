@@ -25,3 +25,5 @@ class pyfancy:  # Our Class
     REVERSE = '\033[07m'
     STRIKETHROUGH = '\033[09m'
     INVISABLE = '\033[08m'
+    
+    def blink(text): return BLINK + text + END
