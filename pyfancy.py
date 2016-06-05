@@ -160,7 +160,7 @@ class pyfancy:
         x = 0
         for i in range(len(addition)): 
             if (addition[i] in [" ", "\t", "\n", "\r"]): x+=1
-            [red, lightRed, yellow, green, lightBlue, blue][(i-x) % 6](self, addition[i])
+            [self.red, self.lightRed, self.yellow, self.green, self.lightBlue, self.blue][(i-x) % 6](self, addition[i])
 
     # Multicolored text
     def multi(self,string):
