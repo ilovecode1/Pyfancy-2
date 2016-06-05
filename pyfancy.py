@@ -142,15 +142,6 @@ class pyfancy:
     def lightMagenta(self,addition=""):
         self.out += "\033[95m" + addition
         return self
-        
-    #Alternate between all the colours of the rainbow
-    #No orange, replaced with lightRed
-    #No purple/violet so I ignored it
-    def rainbow(self,addition=""):
-        x = 0
-        for i in range(len(addition)): 
-            if (addition[i] in [" ", "\t", "\n", "\r"]): x+=1
-            [red, lightRed, yellow, green, lightBlue, blue][(i-x) % 6](self, addition[i])
 
     # Light cyan text
     def lightCyan(self,addition=""):
@@ -161,9 +152,18 @@ class pyfancy:
     def white(self,addition=""):
         self.out += "\033[97m" + addition
         return self
+        
+    #Alternate between all the colours of the rainbow
+    #No orange, replaced with lightRed
+    #No purple/violet so I ignored it
+    def rainbow(self,addition=""):
+        x = 0
+        for i in range(len(addition)): 
+            if (addition[i] in [" ", "\t", "\n", "\r"]): x+=1
+            [red, lightRed, yellow, green, lightBlue, blue][(i-x) % 6](self, addition[i])
 
-    # Rainbow text (cycles through different modifiers)
-    def rainbow(self,string):
+    # Multicolored text
+    def multi(self,string):
         i = 31 # ID of escape code; starts at 31 (red) and goes to 36 (cyan)
         for c in string: # Iterate through string
             self.out += "\033[" + str(i) + "m" + c
