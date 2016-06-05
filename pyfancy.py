@@ -152,3 +152,12 @@ class pyfancy:
     def white(self,addition=""):
         self.out += "\033[97m" + addition
         return self
+
+    # Rainbow text (cycles through different modifiers)
+    def rainbow(self,string):
+        i = 31 # ID of escape code; starts at 31 (red) and goes to 36 (cyan)
+        for c in string: # Iterate through string
+            self.out += "\033[" + str(i) + "m" + c
+            i += 1 # Why u no have ++i? >:(
+            if(i > 36): i = 31
+        return self
