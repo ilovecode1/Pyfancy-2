@@ -29,6 +29,10 @@ class pyfancy:
     def get(self):
         return self.out + "\033[0m"
 
+    # Outputs text using print (should work in Python 2 and 3)
+    def output(self):
+        print(self.get())
+
     # Adds new text without changing the styling
     def add(self,addition):
         self.out += addition;
