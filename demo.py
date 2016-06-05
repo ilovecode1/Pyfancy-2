@@ -1,3 +1,4 @@
 from pyfancy import *
 
-print pyfancy().red("Hello").raw(", ").blue("world!").get()
+pyfancy().red("Hello").raw(", ").blue("world!").output()
+pyfancy().rainbow("Rainbow text").output()
