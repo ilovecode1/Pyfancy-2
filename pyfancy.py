@@ -29,8 +29,6 @@ class pyfancy:
     def get(self):
         return self.out + "\033[0m"
 
-    __str__ = get
-
     # Outputs text using print (should work in Python 2 and 3)
     def output(self):
         print(self.get())
@@ -144,6 +142,15 @@ class pyfancy:
     def lightMagenta(self,addition=""):
         self.out += "\033[95m" + addition
         return self
+        
+    #Alternate between all the colours of the rainbow
+    #No orange, replaced with lightRed
+    #No purple/violet so I ignored it
+    def rainbow(self,addition=""):
+        x = 0
+        for i in range(len(addition)): 
+            if (addition[i] in [" ", "\t", "\n", "\r"]): x+=1
+            [red, lightRed, yellow, green, lightBlue, blue][(i-x) % 6](self, addition[i])
 
     # Light cyan text
     def lightCyan(self,addition=""):
