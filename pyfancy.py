@@ -147,7 +147,10 @@ class pyfancy:
     #No orange, replaced with lightRed
     #No purple/violet so I ignored it
     def rainbow(self,addition=""):
-        for i in range(len(addition)): [red, lightRed, yellow, green, lightBlue, blue][i % 6](self, addition[i])
+        x = 0
+        for i in range(len(addition)): 
+            if (addition[i] in [" ", "\t", "\n", "\r"]): x+=1
+            [red, lightRed, yellow, green, lightBlue, blue][(i-x) % 6](self, addition[i])
 
     # Light cyan text
     def lightCyan(self,addition=""):
