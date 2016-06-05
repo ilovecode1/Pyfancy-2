@@ -20,13 +20,33 @@
 # The get() method is better for accessing text because it resets the text
 # style so no new text will have unwanted styling.
 
-def sgr(code):
-    def inner(self, addition = ""):
-        self.out += "\033[%sm%s" % (code, addition)
-        return self
-    return inner
-
 class pyfancy:
+
+    codes = { # The different escape codes
+        'raw': 0,
+        'bold': 1,
+        'dim': 2,
+        'underlined': 4,
+        'blinking': 5,
+        'inverted': 7,
+        'hidden': 8,
+        'black': 30,
+        'red': 31,
+        'green': 32,
+        'yellow': 33,
+        'blue': 34,
+        'magenta': 35,
+        'cyan': 36,
+        'light_gray': 37,
+        'dark_gray': 90,
+        'light_red': 91,
+        'light_green': 92,
+        'light_yellow': 93,
+        'light_blue': 94,
+        'light_magenta': 95,
+        'light_cyan': 96,
+        'white': 97
+    }
 
     # Stores output text, for reset use get()
     out = ""
@@ -46,60 +66,6 @@ class pyfancy:
         self.out += addition;
         return self;
 
-    # Raw text - i.e. default styling
-    raw = sgr("0")
-
-    # Bold text
-    bold = sgr("1")
-
-    # Dim text
-    dim = sgr("2")
-
-    # Underlined text
-    underlined = sgr("4")
-
-    # Blinking text
-    blink = sgr("5")
-
-    # Foreground / background inverted
-    invert = sgr("7")
-
-    # Hidden text
-    hidden = sgr("8")
-
-    # Black text
-    black = sgr("30")
-    # Red text
-    red = sgr("31")
-    # Green text
-    green = sgr("32")
-    # Yellow text
-    yellow = sgr("33")
-    # Blue text
-    blue = sgr("34")
-    # Magenta text
-    magenta = sgr("35")
-    # Cyan text
-    cyan = sgr("36")
-    # Light gray text
-    lightGray = sgr("37")
-    # Dark gray text
-    darkGray = sgr("38")
-    # Light red text
-    lightRed = sgr("39")
-    # Light green text
-    lightGreen = sgr("92")
-    # Light yellow text
-    lightYellow = sgr("93")
-    # Light blue text
-    lightBlue = sgr("94")
-    # Light magenta text
-    lightMagenta = sgr("95")
-    # Light cyan text
-    lightCyan = sgr("96")
-    # White text
-    white = sgr("97")
-
     # Rainbow text (cycles through different modifiers)
     def rainbow(self,string):
         i = 31 # ID of escape code; starts at 31 (red) and goes to 36 (cyan)
@@ -108,3 +74,16 @@ class pyfancy:
             i += 1 # Why u no have ++i? >:(
             if(i > 36): i = 31
         return self
+
+# Adds a formatting function to pyfancy with the specified name and formatting code
+# This shouldn't be exported
+def _add(name,number):
+    def inner(self, addition = ""):
+        self.out += "\033[%dm%s" % (number, addition)
+        return self
+    setattr(pyfancy,name,inner)
+
+# Generate all default color / format codes
+for item in pyfancy.codes.items():
+    if len(item) > 1: # Just in case
+        _add(item[0],item[1])
