@@ -1,193 +1,40 @@
-*New!* New Site: http://pyfancy.strikingly.com/
+### Overview
+pyfancy is a simple Python library that provides a mechanism for easily styling text in some terminal enviroments. Text is styled by chaining together methods that add escape codes for color modifiers to the text.
 
-*New!* Pyfancy Simple that does not have random() or IDE Detection!
+### Usage
+Formatting using pyfancy all follows the same basic pattern. First, there is the initializer, which just sets up the pyfancy object. Next is a chain of function calls that provide text formatting. Finally, there is a last method chained on which either returns the text string with format escape codes, or which directly outputs the text using the print statement / method. (The output method *should* be compatible with Python 2 and 3.)
 
-#FAQ
-
-Q. What is pyfancy?
-
-A. Pyfancy is a python module to simplify printing colors in the terminal.
-
-Q. How does it work?
-
-A. If you look in the code you have the class pyfancy in it are weird things that look like ```\033[0m``` that is unicode that makes the color when added to a string.
-
-Q. How do I set it up?
-
-A. Look at the instructions here at https://github.com/ilovecode1/pyfancy#quick-start
-
-#1.0.0
-
-Finishing Touches!
-
-#0.9.6
-
-1. Faster
-2. Better Code
-3. Runs Better On More Systems
-4. Less Code
-
-#0.9.2
-
-1. Comments!
-
-#0.9
-
-1. 2 new colors
-2. Removed documentation() replaced it with ```documentation```!
-
-We are making any python program colorful (in the terminal only) the simple way!
-
-## Docs
-
-#BLINK
-
+This chain of code looks basically like this:
 ```python
-print(pyfancy.BLINK + "Hello Blink!" + pyfancy.END)
+pyfancy().[chained statements].output() # To print using print statement / method
+pyfancy().[chained statements].get()    # To get formatted text string
 ```
 
-#BLACKTEXTGREYBACKGROUND
-
+There are two different ways to use the chained statements. The first is to provide the text that is to be chained as part of the statement call. For example, the following prints "Hello, world!" in red:
 ```python
-print(pyfancy.BLACKTEXTGREYBACKGROUND + "Hello BLack Text Grey Background!" + pyfancy.END)
+pyfancy().red("Hello, world!").output()
+```
+However, chained statements are really just modifiers with an optional text argument. The following example works identically to the previous example:
+```python
+pyfancy().red().add("Hello, world!").output()
+```
+Using chained statements, then, allows for modifiers to be stacked:
+```python
+pyfancy().red().bold().add("Hello, world!").output()
+
+# or
+
+pyfancy().red().bold("Hello, world!").output()
+
+# The red() and bold() calls can also be in the opposite order.
+```
+Of course, there can only be, for example, one color active at a time. This allows for the creation of multicolored statements:
+```python
+pyfancy().red("Hello").magenta(", ").blue("world!").output()
+```
+It is also possible to reset all styles, either to get default styling, or to ensure that styles are reset, using the `raw` modifier:
+```python
+pyfancy().raw("You walk into a ").red().bold("DANGEROUS").raw(" room.").output()
 ```
 
-#random()
-
-```python
-print (pyfancy.random() + "Hello Random!" + pyfancy.END)
-```
-
-#WHITETEXTBLACKBACKROUND
-
-```python
-print (pyfancy.WHITETEXTBLACKBACKROUND + "Hello White Text Black Backround!" + pyfancy.END)
-```
-
-#MISTGREY
-
-```python
-print (pyfancy.MISTGREY + "Hello Mist Grey!" + pyfancy.END)
-```
-
-#INVISABLE2
-
-```python
-print (pyfancy.INVISABLE2 + "Hello Invisable 2!" + pyfancy.END)
-```
-
-#PURPLEBLUE
-
-```python
-print (pyfancy.PURPLEBLUE + "Hello Purple-Blue!" + pyfancy.END)
-```
-
-#BLUE
-
-```python
-print (pyfancy.BLUE + "Hello Blue!" + pyfancy.END)
-```
-
-#GREEN
-
-```python
-print (pyfancy.GREEN + "Hello Green!" + pyfancy.END)
-```
-
-#YELLOW
-
-```python
-print (pyfancy.YELLOW + "Hello Yellow!" + pyfancy.END)
-```
-
-#RED
-
-```python
-print (pyfancy.RED + "Hello Red!" + pyfancy.END)
-```
-
-#PINK
-
-```python
-print (pyfancy.PINK + "Hello Pink!" + pyfancy.END)
-```
-
-#LIGHTBLUE
-
-```python
-print (pyfancy.LIGHTBLUE + "Hello Lightblue!" + pyfancy.END)
-```
-
-#LIGHTGREEN
-
-```python
-print (pyfancy.LIGHTGREEN + "Hello Lightgreen!" + pyfancy.END)
-```
-
-#LIGHTRED
-
-```python
-print (pyfancy.LIGHTRED + "Hello Lightred!" + pyfancy.END)
-```
-
-#LIGHTGREY
-
-```python
-print (pyfancy.LIGHTGREY + "Hello Lightgrey!" + pyfancy.END)
-```
-
-#DARKGREY
-
-```python
-print (pyfancy.DARKGREY + "Hello Darkgrey!" + pyfancy.END)
-```
-
-#CYAN
-
-```python
-print (pyfancy.CYAN + "Hello Cyan!" + pyfancy.END)
-```
-
-#PURPLE
-
-```python
-print (pyfancy.PURPLE + "Hello Purple!" + pyfancy.END)
-```
-
-#BOLD
-
-```python
-print (pyfancy.BOLD + "Hello Bold!" + pyfancy.END)
-```
-
-#UNDELINE
-
-```python
-print (pyfancy.UNDERLINE + "Hello Underline!" + pyfancy.END)
-```
-
-#REVERSE
-
-```python
-print (pyfancy.REVERSE + "Hello Reverse!" + pyfancy.END)
-```
-
-#STRIKETHROUGH
-
-```python
-print (pyfancy.STRIKETHOUGH + "Hello Strikethough!" + pyfancy.END)
-```
-
-#INVISABLE
-
-```python
-print (pyfancy.INVISABLE + "Hello Invisable!" + pyfancy.END)
-```
-
-#Quick Start
-
-1. ```git clone https://github.com/ilovecode1/pyfancy.git```
-2. ```cd pyfancy```
-3. ```python```
-4. ```from pyfancy import *```
-5. ```demo()```
+In order to use pyfancy, import the module with `from pyfancy import *`.
