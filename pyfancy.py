@@ -20,6 +20,12 @@
 # The get() method is better for accessing text because it resets the text
 # style so no new text will have unwanted styling.
 
+def sgr(code):
+    def inner(self, addition = ""):
+        self.out += "\033[%sm%s" % (code, addition)
+        return self
+    return inner
+
 class pyfancy:
 
     # Stores output text, for reset use get()
@@ -41,116 +47,55 @@ class pyfancy:
         return self;
 
     # Raw text - i.e. default styling
-    def raw(self,addition=""):
-        self.out += "\033[0m" + addition
-        return self
+    raw = sgr("0")
 
     # Bold text
-    def bold(self,addition=""):
-        self.out += "\033[1m" + addition
-        return self
+    bold = sgr("1")
 
     # Dim text
-    def dim(self,addition=""):
-        self.out += "\033[2m" + addition
-        return self
+    dim = sgr("2")
 
     # Underlined text
-    def underlined(self,addition=""):
-        self.out += "\033[4m" + addition
-        return self
+    underlined = sgr("4")
 
     # Blinking text
-    def blink(self,addition=""):
-        self.out += "\033[5m" + addition
-        return self
+    blink = sgr("5")
 
     # Foreground / background inverted
-    def invert(self,addition=""):
-        self.out += "\033[7m" + addition
-        return self
+    invert = sgr("7")
 
     # Hidden text
-    def hidden(self,addition=""):
-        self.out += "\033[8m" + addition
-        return self
+    hidden = sgr("8")
 
     # Black text
-    def black(self,addition=""):
-        self.out += "\033[30m" + addition
-        return self
-
+    black = sgr("30")
     # Red text
-    def red(self,addition=""):
-        self.out += "\033[31m" + addition
-        return self
-
+    red = sgr("31")
     # Green text
-    def green(self,addition=""):
-        self.out += "\033[32m" + addition
-        return self
-    
+    green = sgr("32")
     # Yellow text
-    def yellow(self,addition=""):
-        self.out += "\033[33m" + addition
-        return self
-
+    yellow = sgr("33")
     # Blue text
-    def blue(self,addition=""):
-        self.out += "\033[34m" + addition
-        return self
-
+    blue = sgr("34")
     # Magenta text
-    def magenta(self,addition=""):
-        self.out += "\033[35m" + addition
-        return self
-
+    magenta = sgr("35")
     # Cyan text
-    def cyan(self,addition=""):
-        self.out += "\033[36m" + addition
-        return self
-
+    cyan = sgr("36")
     # Light gray text
-    def lightGray(self,addition=""):
-        self.out += "\033[37m" + addition
-        return self
-
+    lightGray = sgr("37")
     # Dark gray text
-    def darkGray(self,addition=""):
-        self.out += "\033[90m" + addition
-        return self
-
+    darkGray = sgr("38")
     # Light red text
-    def lightRed(self,addition=""):
-        self.out += "\033[91m" + addition
-        return self
-
+    lightRed = sgr("39")
     # Light green text
-    def lightGreen(self,addition=""):
-        self.out += "\033[92m" + addition
-        return self
-
+    lightGreen = sgr("92")
     # Light yellow text
-    def lightYellow(self,addition=""):
-        self.out += "\033[93m" + addition
-        return self
-
+    lightYellow = sgr("93")
     # Light blue text
-    def lightBlue(self,addition=""):
-        self.out += "\033[94m" + addition
-        return self
-
+    lightBlue = sgr("94")
     # Light magenta text
-    def lightMagenta(self,addition=""):
-        self.out += "\033[95m" + addition
-        return self
-
+    lightMagenta = sgr("95")
     # Light cyan text
-    def lightCyan(self,addition=""):
-        self.out += "\033[96m" + addition
-        return self
-
+    lightCyan = sgr("96")
     # White text
-    def white(self,addition=""):
-        self.out += "\033[97m" + addition
-        return self
+    white = sgr("97")
