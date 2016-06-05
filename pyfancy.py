@@ -1,222 +1,150 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-# Pyfancy 1.0.0 by Cosmic Open Source Projects learn more at
-# https://github.com/ilovecode1/pyfancy!
+# Provides methods for manipulating text styling in specific terminals.
+# Uses a basic chaining method where text properties are added by calling
+# methods with related names.
+# 
+# For example, to print "Hello, world!" in red:
+#   print pyfancy().red("Hello, world!").get()
+#
+# Styles can be changed for different text components. Example:
+#   print pyfancy().red("Hello").raw(", ").blue("world!").get()
+#
+# No output text is necessary when calling a styling method. This allows
+# styles to be stacked:
+#   print pyfancy().red().bold("Hello, world!").get()
+#
+# There are two provided ways to access the modified text. The first is
+# direct access to the string object called "out". However, accessing this
+# object will not reset the style, so any text outputted after will have
+# the same style as whatever the text was at the end of the chain.
+# 
+# The get() method is better for accessing text because it resets the text
+# style so no new text will have unwanted styling.
 
-import sys  # Import SYS
+class pyfancy:
 
+    # Stores output text, for reset use get()
+    out = ""
 
-def idleorcommandline():  # This is from Pylaunch API
-    '''If idleorcommandline returns True its IDLE if False its command line!'''
+    # Returns output text and resets properties
+    def get(self):
+        return self.out + "\033[0m"
 
-    a = sys.executable
-    m = '\\\\'
-    m = m[0]
-    while True:
-        b = len(a)
-        c = a[b - 1]
-        if c == m:
-            break
-        a = a[:b - 1]
-    if sys.executable == a + 'pythonw.exe':
-        return True  # IDE
-    else:
-        return False  # CMD
+    # Adds new text without changing the styling
+    def add(self,addition):
+        self.out += addition;
+        return self;
 
+    # Raw text - i.e. default styling
+    def raw(self,addition=""):
+        self.out += "\033[0m" + addition
+        return self
 
-get = idleorcommandline()
+    # Bold text
+    def bold(self,addition=""):
+        self.out += "\033[1m" + addition
+        return self
 
-documentation = 'For help go to https://github.com/ilovecode1/pyfancy!'  # Docs
+    # Dim text
+    def dim(self,addition=""):
+        self.out += "\033[2m" + addition
+        return self
 
+    # Underlined text
+    def underlined(self,addition=""):
+        self.out += "\033[4m" + addition
+        return self
 
-class pyfancy:  # Our Class
+    # Blinking text
+    def blink(self,addition=""):
+        self.out += "\033[5m" + addition
+        return self
+
+    # Foreground / background inverted
+    def invert(self,addition=""):
+        self.out += "\033[7m" + addition
+        return self
+
+    # Hidden text
+    def hidden(self,addition=""):
+        self.out += "\033[8m" + addition
+        return self
+
+    # Black text
+    def black(self,addition=""):
+        self.out += "\033[30m" + addition
+        return self
+
+    # Red text
+    def red(self,addition=""):
+        self.out += "\033[31m" + addition
+        return self
+
+    # Green text
+    def green(self,addition=""):
+        self.out += "\033[32m" + addition
+        return self
     
-    version = "1.0.0"
-    if get:  # IDE
+    # Yellow text
+    def yellow(self,addition=""):
+        self.out += "\033[33m" + addition
+        return self
 
-        # Remove Values in Varibles
+    # Blue text
+    def blue(self,addition=""):
+        self.out += "\033[34m" + addition
+        return self
 
-        END = ''
-        BLINK = ''
-        INVISIBLE2 = ''
-        PURPLEBLUE = ''
-        WHITETEXTBLACKBACKROUND = ''
-        MISTGREY = ''
-        PURPLE = ''
-        CYAN = ''
-        LIGHTGREY = ''
-        DARKGREY = ''
-        LIGHTRED = ''
-        LIGHTGREEN = ''
-        LIGHTBLUE = ''
-        PINK = ''
-        BLUE = ''
-        GREEN = ''
-        YELLOW = ''
-        RED = ''
-        BOLD = ''
-        UNDERLINE = ''
-        REVERSE = ''
-        STRIKETHROUGH = ''
-        INVISIBLE = ''
-        BLACKTEXTGREYBACKGROUND = ''
-    else:
+    # Magenta text
+    def magenta(self,addition=""):
+        self.out += "\033[35m" + addition
+        return self
 
-         # It's ok to turn on varibles
+    # Cyan text
+    def cyan(self,addition=""):
+        self.out += "\033[36m" + addition
+        return self
 
-        END = '\033[0m'
-        BLINK = '\033[05m'
-        BLACKTEXTGREYBACKGROUND = '\033[100m'
-        INVISIBLE2 = '\033[02m'
-        PURPLEBLUE = '\033[34m'
-        WHITETEXTBLACKBACKROUND = '\033[07m'
-        MISTGREY = '\033[20m'
-        PURPLE = '\033[35m'
-        CYAN = '\033[36m'
-        LIGHTGREY = '\033[37m'
-        DARKGREY = '\033[90m'
-        LIGHTRED = '\033[91m'
-        LIGHTGREEN = '\033[92m'
-        LIGHTBLUE = '\033[94m'
-        PINK = '\033[95m'
-        BLUE = '\033[94m'
-        GREEN = '\033[92m'
-        YELLOW = '\033[93m'
-        RED = '\033[91m'
-        BOLD = '\033[1m'
-        UNDERLINE = '\033[4m'
-        REVERSE = '\033[07m'
-        STRIKETHROUGH = '\033[09m'
-        INVISIBLE = '\033[08m'
+    # Light gray text
+    def lightGray(self,addition=""):
+        self.out += "\033[37m" + addition
+        return self
 
-    def random():  # Random Collor
+    # Dark gray text
+    def darkGray(self,addition=""):
+        self.out += "\033[90m" + addition
+        return self
 
-        from random import randint  # Get Random
+    # Light red text
+    def lightRed(self,addition=""):
+        self.out += "\033[91m" + addition
+        return self
 
-        if get:  # Turn Off Varibles!
+    # Light green text
+    def lightGreen(self,addition=""):
+        self.out += "\033[92m" + addition
+        return self
 
-            return
-        else:
+    # Light yellow text
+    def lightYellow(self,addition=""):
+        self.out += "\033[93m" + addition
+        return self
 
-             # Turn On Varibles
+    # Light blue text
+    def lightBlue(self,addition=""):
+        self.out += "\033[94m" + addition
+        return self
 
-            BLINK = '\033[05m'
-            INVISIBLE2 = '\033[02m'
-            PURPLEBLUE = '\033[34m'
-            WHITETEXTBLACKBACKROUND = '\033[07m'
-            MISTGREY = '\033[20m'
-            PURPLE = '\033[35m'
-            CYAN = '\033[36m'
-            LIGHTGREY = '\033[37m'
-            DARKGREY = '\033[90m'
-            LIGHTRED = '\033[91m'
-            LIGHTGREEN = '\033[92m'
-            LIGHTBLUE = '\033[94m'
-            PINK = '\033[95m'
-            BLUE = '\033[94m'
-            GREEN = '\033[92m'
-            YELLOW = '\033[93m'
-            RED = '\033[91m'
-            BOLD = '\033[1m'
-            UNDERLINE = '\033[4m'
-            REVERSE = '\033[07m'
-            STRIKETHROUGH = '\033[09m'
-            INVISIBLE = '\033[08m'
+    # Light magenta text
+    def lightMagenta(self,addition=""):
+        self.out += "\033[95m" + addition
+        return self
 
-            rand = randint(1, 21)  # Random Varible
+    # Light cyan text
+    def lightCyan(self,addition=""):
+        self.out += "\033[96m" + addition
+        return self
 
-            # Set
-
-            if rand == 1:
-
-                return INVISIBLE2
-
-            if rand == 2:
-
-                return PURPLEBLUE
-
-            if rand == 3:
-
-                return WHITETEXTBLACKBACKROUND
-
-            if rand == 4:
-
-                return MISTGREY
-
-            if rand == 5:
-
-                return PURPLE
-
-            if rand == 6:
-
-                return CYAN
-
-            if rand == 7:
-
-                return LIGHTGREY
-
-            if rand == 8:
-
-                return DARKGREY
-
-            if rand == 9:
-
-                return LIGHTRED
-
-            if rand == 10:
-
-                return LIGHTGREEN
-
-            if rand == 11:
-
-                return LIGHTBLUE
-
-            if rand == 12:
-
-                return PINK
-
-            if rand == 13:
-
-                return BLUE
-
-            if rand == 14:
-
-                return GREEN
-
-            if rand == 15:
-
-                return YELLOW
-
-            if rand == 16:
-
-                return RED
-
-            if rand == 17:
-
-                return BOLD
-
-            if rand == 18:
-
-                return UNDERLINE
-
-            if rand == 19:
-
-                return REVERSE
-
-            if rand == 20:
-
-                return STRIKETHROUGH
-
-            if rand == 21:
-
-                return INVISIBLE
-
-
-def demo():  # Quick Demo!
-    print (pyfancy.RED + 'HELLO RED!' + pyfancy.END)
-    
-if __name__ == "__main__":
-    print("Welcome to Pyfancy!")
-    demo()
-else:
-    print("")
+    # White text
+    def white(self,addition=""):
+        self.out += "\033[97m" + addition
+        return self
