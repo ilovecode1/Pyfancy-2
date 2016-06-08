@@ -22,9 +22,9 @@
 
 class pyfancy:
     def __str__(self): return self.get()
-    def __init__(obj=""):
+    def __init__(self, obj=""):
         # Stores output text, for reset use get()
-        out = str(obj)
+        self.out = str(obj)
 
     # Returns output text and resets properties
     def get(self):
