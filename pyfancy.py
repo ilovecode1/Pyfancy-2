@@ -21,9 +21,10 @@
 # style so no new text will have unwanted styling.
 
 class pyfancy:
-
-    # Stores output text, for reset use get()
-    out = ""
+    def __str__(self): return self.get()
+    def __init__(self, obj=""):
+        # Stores output text, for reset use get()
+        self.out = str(obj)
 
     # Returns output text and resets properties
     def get(self):
