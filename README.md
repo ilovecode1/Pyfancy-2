@@ -12,7 +12,7 @@ A. Pyfancy is a python module to simplify printing colors in the terminal.
 
 Q. How does it work?
 
-A. If you look in the code you have the class pyfancy in it are weird things that look like ```\033[0m``` that is unicode that makes the color when added to a string.
+A. If you look in the code you have the class pyfancy in it are weird things that look like ```\033[0m``` that is ANSI escape codes that makes the terminal print one of 8 different colours when added to a string.
 
 Q. How do I set it up?
 
