@@ -26,6 +26,35 @@ class pyfancy:
         # Stores output text, for reset use get()
         self.out = str(obj)
 
+    codes = { # The different escape codes
+        'raw':            0,
+        'bold':           1,
+        'dim':            2,
+        'underlined':     4,
+        'blinking':       5,
+        'inverted':       7,
+        'hidden':         8,
+        'black':         30,
+        'red':           31,
+        'green':         32,
+        'yellow':        33,
+        'blue':          34,
+        'magenta':       35,
+        'cyan':          36,
+        'light_gray':    37,
+        'dark_gray':     90,
+        'light_red':     91,
+        'light_green':   92,
+        'light_yellow':  93,
+        'light_blue':    94,
+        'light_magenta': 95,
+        'light_cyan':    96,
+        'white':         97
+    }
+
+    # Stores output text, for reset use get()
+    out = ""
+
     # Returns output text and resets properties
     def get(self):
         return self.out + "\033[0m"
@@ -38,122 +67,7 @@ class pyfancy:
     def add(self,addition):
         self.out += addition;
         return self;
-
-    # Raw text - i.e. default styling
-    def raw(self,addition=""):
-        self.out += "\033[0m" + addition
-        return self
-
-    # Bold text
-    def bold(self,addition=""):
-        self.out += "\033[1m" + addition
-        return self
-
-    # Dim text
-    def dim(self,addition=""):
-        self.out += "\033[2m" + addition
-        return self
-
-    # Underlined text
-    def underlined(self,addition=""):
-        self.out += "\033[4m" + addition
-        return self
-
-    # Blinking text
-    def blink(self,addition=""):
-        self.out += "\033[5m" + addition
-        return self
-
-    # Foreground / background inverted
-    def invert(self,addition=""):
-        self.out += "\033[7m" + addition
-        return self
-
-    # Hidden text
-    def hidden(self,addition=""):
-        self.out += "\033[8m" + addition
-        return self
-
-    # Black text
-    def black(self,addition=""):
-        self.out += "\033[30m" + addition
-        return self
-
-    # Red text
-    def red(self,addition=""):
-        self.out += "\033[31m" + addition
-        return self
-
-    # Green text
-    def green(self,addition=""):
-        self.out += "\033[32m" + addition
-        return self
-    
-    # Yellow text
-    def yellow(self,addition=""):
-        self.out += "\033[33m" + addition
-        return self
-
-    # Blue text
-    def blue(self,addition=""):
-        self.out += "\033[34m" + addition
-        return self
-
-    # Magenta text
-    def magenta(self,addition=""):
-        self.out += "\033[35m" + addition
-        return self
-
-    # Cyan text
-    def cyan(self,addition=""):
-        self.out += "\033[36m" + addition
-        return self
-
-    # Light gray text
-    def lightGray(self,addition=""):
-        self.out += "\033[37m" + addition
-        return self
-
-    # Dark gray text
-    def darkGray(self,addition=""):
-        self.out += "\033[90m" + addition
-        return self
-
-    # Light red text
-    def lightRed(self,addition=""):
-        self.out += "\033[91m" + addition
-        return self
-
-    # Light green text
-    def lightGreen(self,addition=""):
-        self.out += "\033[92m" + addition
-        return self
-
-    # Light yellow text
-    def lightYellow(self,addition=""):
-        self.out += "\033[93m" + addition
-        return self
-
-    # Light blue text
-    def lightBlue(self,addition=""):
-        self.out += "\033[94m" + addition
-        return self
-
-    # Light magenta text
-    def lightMagenta(self,addition=""):
-        self.out += "\033[95m" + addition
-        return self
-
-    # Light cyan text
-    def lightCyan(self,addition=""):
-        self.out += "\033[96m" + addition
-        return self
-
-    # White text
-    def white(self,addition=""):
-        self.out += "\033[97m" + addition
-        return self
-        
+      
     #Alternate between all the colours of the rainbow
     #No orange, replaced with lightRed
     #No purple/violet so I ignored it
@@ -172,3 +86,16 @@ class pyfancy:
             i += 1 # Why u no have ++i? >:(
             if(i > 36): i = 31
         return self
+
+# Adds a formatting function to pyfancy with the specified name and formatting code
+# This shouldn't be exported
+def _add(name,number):
+    def inner(self, addition = ""):
+        self.out += "\033[%dm%s" % (number, addition)
+        return self
+    setattr(pyfancy,name,inner)
+
+# Generate all default color / format codes
+for item in pyfancy.codes.items():
+    if len(item) > 1: # Just in case
+        _add(item[0],item[1])
