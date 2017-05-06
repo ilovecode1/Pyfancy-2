@@ -78,6 +78,61 @@ class pyfancy:
             [self.red, self.light_red, self.yellow, self.green, self.light_blue, self.blue][(i-x) % 6](addition[i])
         return self
 
+    # Simply apply the attribute with the given name
+    def attr(self,name):
+        if name in self.codes:
+            self.out += "\033[%dm" % self.codes[name]
+
+    # Parses text and automatically assigns attributes
+    # Attributes are specified through brackets
+    # For example, .parse("{red Hello}") is the same as .red("Hello")
+    # Multiple attributes can be specified by commas, eg {red,bold Hello}
+    # Brackets can be nested, eg {red Hello, {bold world}!}
+    # Brackets can be escaped with backslashes 
+    def parse(self,text):
+        i = 0 # Current index
+        props = [] # Property stack; required for nested brackets
+        while i < len(text):
+            c = text[i]
+            if c == '\\': # Escape character
+                i += 1
+                if i < len(text):
+                    self.out += text[i]
+            elif c == '{': # New property list
+                prop = '' # Current property
+                i += 1
+                curprops = [] # Properties that are part of this bracket
+                while text[i] != ' ':
+                    if i + 1 == len(text):
+                        return self
+                    if text[i] == ',':
+                        # Properties separated by commas
+                        self.attr(prop);
+                        curprops.append(prop)
+                        prop = ''
+                        i += 1
+                    prop += text[i]
+                    i += 1
+                self.attr(prop)
+                curprops.append(prop)
+                # Add properties to property stack
+                props.append(curprops)
+            elif c == '}':
+                # Reset styling
+                self.raw()
+                # Remove last entry from property stack
+                if len(props) >= 1:
+                    props.pop()
+                # Apply all properties from any surrounding brackets
+                for plist in props:
+                    for p in plist:
+                        self.attr(p)
+            else:
+                self.out += c
+            i += 1
+        return self
+                        
+
     # Multicolored text
     def multi(self,string):
         i = 31 # ID of escape code; starts at 31 (red) and goes to 36 (cyan)
