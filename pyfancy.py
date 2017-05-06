@@ -78,6 +78,25 @@ class pyfancy:
             [self.red, self.light_red, self.yellow, self.green, self.light_blue, self.blue][(i-x) % 6](addition[i])
         return self
 
+    def strip(self):
+        text = ""
+        i = 0
+        while i < len(self.out):
+            if self.out[i] == '\033':
+                if i + 1 >= len(self.out):
+                    return text + '\033'
+                if self.out[i + 1] == '[':
+                    i += 1
+                    if 'm' in self.out[i:]:
+                        while self.out[i] != 'm':
+                            i += 1
+                        i += 1
+                    else:
+                        text += '\033'
+            text += self.out[i]
+            i += 1
+        return text
+
     # Simply apply the attribute with the given name
     def attr(self,name):
         if name in self.codes:
