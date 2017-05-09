@@ -1,0 +1,4 @@
+- Every PR must be reviewed by one other person at the least before getting merged.
+- Proper tags must be used for organization + communication reasons.
+- Travis must pass before merging.
+- If you want to tackle an issue assign yourself or if you want to suggest someone else assign them.
