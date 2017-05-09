@@ -160,7 +160,10 @@ class pyfancy:
             i += 1 # Why u no have ++i? >:(
             if(i > 36): i = 31
         return self
-
+    
+    def parse(self, addition):
+        
+                        
 # Adds a formatting function to pyfancy with the specified name and formatting code
 # This shouldn't be exported
 def _add(name,number):
