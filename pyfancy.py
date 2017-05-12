@@ -73,7 +73,7 @@ class pyfancy:
     # Outputs text using print (should work in Python 2 and 3)
 
     def output(self):
-        print self.get()
+        print(self.get())
 
     # Adds new text without changing the styling
 
