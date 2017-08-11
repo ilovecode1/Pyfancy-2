@@ -39,7 +39,7 @@ pyfancy().raw("You walk into a ").red().bold("DANGEROUS").raw(" room.").output()
 
 In order to use pyfancy, import the module with `from pyfancy import *`.
 
-###Contributors
+### Contributors
 
 @CosmicWebServices
 
