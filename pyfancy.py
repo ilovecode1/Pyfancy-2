@@ -20,8 +20,12 @@
 # The get() method is better for accessing text because it resets the text
 # style so no new text will have unwanted styling.
 
-class pyfancy:
-    def __str__(self): return self.get()
+class pyfancy(parseText):
+    def __str__(self):
+        if (parseText):
+            return self.parse(parseText)
+        else:
+            return self.get()
     def __init__(self, obj=""):
         # Stores output text, for reset use get()
         self.out = str(obj)
