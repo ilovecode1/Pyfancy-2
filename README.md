@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ilovecode1/Pyfancy-2.svg?branch=master)](https://travis-ci.org/ilovecode1/Pyfancy-2)
+
 ### Download
 Go to the [releases page](https://github.com/ilovecode1/Pyfancy-2/releases) and download the latest (or previous) version.
 
