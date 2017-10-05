@@ -3,5 +3,5 @@ python:
   - "2.7"
   - "3.6"
 script:
-  - python pyfancy.py
-  - python demo.py
+  - python pyfancy/pyfancy.py
+  - python pyfancy/demo.py
