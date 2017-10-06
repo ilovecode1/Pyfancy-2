@@ -71,7 +71,7 @@ In order to use pyfancy, import the module with `from pyfancy import *`.
 | n/a         | light_blue_bg   | light_blue    |
 | n/a         | light_purple_bg | light_purple  |
 | n/a         | light_cyan_bg   | light_cyan    |
-| n/a         | white_bg        | white_bg      |
+| n/a         | white_bg        | white         |
 
 
 
