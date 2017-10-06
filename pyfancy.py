@@ -45,7 +45,7 @@ class pyfancy:
         'black_bg':        40,
         'red_bg':          41,
         'green_bg':        42,
-        'brown_bg':        43,
+        'yellow_bg':       43,
         'blue_bg':         44,
         'purple_bg':       45,
         'cyan_bg':         46,
