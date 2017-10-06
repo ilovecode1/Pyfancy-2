@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/ilovecode1/Pyfancy-2.svg?branch=master)](https://travis-ci.org/ilovecode1/Pyfancy-2)
+
+### Download
+Go to the [releases page](https://github.com/ilovecode1/Pyfancy-2/releases) and download the latest (or previous) version.
+
 ### Overview
 pyfancy is a simple Python library that provides a mechanism for easily styling text in some terminal enviroments. Text is styled by chaining together methods that add escape codes for color modifiers to the text.
 
@@ -39,14 +44,29 @@ pyfancy().raw("You walk into a ").red().bold("DANGEROUS").raw(" room.").output()
 
 In order to use pyfancy, import the module with `from pyfancy import *`.
 
+### Types of effects
+
+| Text Effect | Background |               |
+|:-----------:|:----------:|---------------|
+|             |            |               |
+| bold        | n/a        |               |
+| dim         | n/a        | Light/Dark    |
+| underlined  | n/a        | n/a           |
+| blinking    | n/a        | n/a           |
+| black       | black_bg   | n/a           |
+| red         | red_bg     | light_red     |
+| green       | green_bg   | light_green   |
+| yellow      | yellow_bg  | light_yellow  |
+| blue        | blue_bg    | light_blue    |
+| magenta     | n/a        | light_magenta |
+| cyan        | n/a        | light_cyan    |
+| n/a         | gray_bg    | dark_gray     |
+| white       | n/a        | n/a           |
+| rainbow     | n/a        | n/a           |
+| multi       | n/a        | n/a           |
+
 ### Contributors
 
-@CosmicWebServices
+Project by @CosmicWebServices
 
-@TheMonsterFromTheDeep
-
-@joker314
-
-@bjskistad
-
-@Jonathan50
+https://github.com/ilovecode1/Pyfancy-2/graphs/contributors
