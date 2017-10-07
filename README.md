@@ -46,24 +46,34 @@ In order to use pyfancy, import the module with `from pyfancy import *`.
 
 ### Types of effects
 
-| Text Effect | Background |               |
-|:-----------:|:----------:|---------------|
-|             |            |               |
-| bold        | n/a        |               |
-| dim         | n/a        | Light/Dark    |
-| underlined  | n/a        | n/a           |
-| blinking    | n/a        | n/a           |
-| black       | black_bg   | n/a           |
-| red         | red_bg     | light_red     |
-| green       | green_bg   | light_green   |
-| yellow      | yellow_bg  | light_yellow  |
-| blue        | blue_bg    | light_blue    |
-| magenta     | n/a        | light_magenta |
-| cyan        | n/a        | light_cyan    |
-| n/a         | gray_bg    | dark_gray     |
-| white       | n/a        | n/a           |
-| rainbow     | n/a        | n/a           |
-| multi       | n/a        | n/a           |
+| Text Effect | Background      |               |
+|:-----------:|:---------------:|---------------|
+|             |                 |               |
+| bold        | n/a             |               |
+| dim         | n/a             | Light/Dark    |
+| underlined  | n/a             | n/a           |
+| blinking    | n/a             | n/a           |
+| black       | black_bg        | n/a           |
+| red         | red_bg          | dark_red      |
+| green       | green_bg        | dark_green    |
+| yellow      | yellow_bg       | dark_yellow   |
+| blue        | blue_bg         | dark_blue     |
+| magenta     | n/a             | dark_magenta  |
+| cyan        | n/a             | dark_cyan     |
+| n/a         | gray_bg         | light_gray    |
+| white       | n/a             | n/a           |
+| rainbow     | n/a             | n/a           |
+| multi       | n/a             | n/a           |
+| n/a         | dark_gray_bg    | dark_gray     |
+| n/a         | light_red_bg    | light_red     |
+| n/a         | light_green_bg  | light_green   |
+| n/a         | light_yellow_bg | light_yellow  |
+| n/a         | light_blue_bg   | light_blue    |
+| n/a         | light_purple_bg | light_purple  |
+| n/a         | light_cyan_bg   | light_cyan    |
+| n/a         | white_bg        | white         |
+
+
 
 ### Contributors
 
