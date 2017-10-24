@@ -52,6 +52,11 @@ You can do this:
 pyfancy("{red Hello {blue world!}}").output()
 ```
 
+For parsing you can also import from a text file:
+```python
+pyfancy().open("import.txt").output()
+```
+
 In order to use pyfancy, import the module with `from pyfancy import *`.
 
 ### Types of effects
