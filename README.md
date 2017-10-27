@@ -42,6 +42,21 @@ It is also possible to reset all styles, either to get default styling, or to en
 pyfancy().raw("You walk into a ").red().bold("DANGEROUS").raw(" room.").output()
 ```
 
+Parsing is a simple, shorter and faster way to use Pyfancy 2. Instead of:
+```python
+pyfancy().red("Hello").blue(" world!").output()
+```
+
+You can do this:
+```python
+pyfancy("{red Hello {blue world!}}").output()
+```
+
+For parsing you can also import from a text file:
+```python
+pyfancy().open("import.txt").output()
+```
+
 In order to use pyfancy, import the module with `from pyfancy import *`.
 
 ### Types of effects
