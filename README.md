@@ -4,7 +4,7 @@
 Go to the [releases page](https://github.com/ilovecode1/Pyfancy-2/releases) and download the latest (or previous) version.
 
 ### Overview
-pyfancy is a simple Python library that provides a mechanism for easily styling text in some terminal enviroments. Text is styled by chaining together methods that add escape codes for color modifiers to the text.
+pyfancy is a simple Python library that provides a mechanism for easily styling text in some terminal environments. Text is styled by chaining together methods that add escape codes for color modifiers to the text.
 
 ### Usage
 Formatting using pyfancy all follows the same basic pattern. First, there is the initializer, which just sets up the pyfancy object. Next is a chain of function calls that provide text formatting. Finally, there is a last method chained on which either returns the text string with format escape codes, or which directly outputs the text using the print statement / method. (The output method *should* be compatible with Python 2 and 3.)
@@ -89,6 +89,8 @@ In order to use pyfancy, import the module with `from pyfancy import *`.
 | n/a         | white_bg        | white         |
 
 
+### License
+Pyfancy-2 is under the MIT license.
 
 ### Contributors
 
