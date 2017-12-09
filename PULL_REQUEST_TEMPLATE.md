@@ -8,4 +8,4 @@
 
 ### Other
 
-*Any thing else that is important.*
+*Anything else that is important.*
