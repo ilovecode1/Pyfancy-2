@@ -92,6 +92,10 @@ class pyfancy:
         self.out += f.read()
         f.close()
         return self
+    
+    def reset(self):
+        self.out =""
+        return self;
       
     #Alternate between all the colours of the rainbow
     #No orange, replaced with lightRed
