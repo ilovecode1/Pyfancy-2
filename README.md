@@ -94,6 +94,20 @@ Pyfancy-2 is under the MIT license.
 
 ### Contributors
 
-Project by @CosmicWebServices
+Project by [@CosmicWebServices](https://github.com/CosmicWebServices)
 
-https://github.com/ilovecode1/Pyfancy-2/graphs/contributors
+[@TheMonsterFromTheDeep](https://github.com/TheMonsterFromTheDeep)
+
+[@joker314](https://github.com/joker314)
+
+[@baranskistad](https://github.com/baranskistad)
+
+[@jonathan50](https://github.com/Jonathan50)
+
+[@rogersouza](https://github.com/rogersouza)
+
+[@vutondesign](https://github.com/vutondesign)
+
+[@cruxicheiros](https://github.com/cruxicheiros)
+
+[@hiccup01](https://github.com/hiccup01)
