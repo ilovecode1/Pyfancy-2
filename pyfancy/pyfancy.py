@@ -85,7 +85,7 @@ class pyfancy:
     # Adds new text without changing the styling
     def add(self,addition):
         self.out += addition;
-        return self;
+        return self
     
     def read(self,file):
         f = open(file, 'r')
@@ -94,8 +94,8 @@ class pyfancy:
         return self
     
     def reset(self):
-        self.out =""
-        return self;
+        self.out = ""
+        return self
       
     #Alternate between all the colours of the rainbow
     #No orange, replaced with lightRed
