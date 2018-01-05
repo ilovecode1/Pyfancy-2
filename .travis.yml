@@ -3,5 +3,8 @@ python:
   - "2.7"
   - "3.6"
 script:
+  - pip install --upgrade pyformat
   - python pyfancy/pyfancy.py
   - python pyfancy/demo.py
+  - pyformat --in-place pyfancy/pyfancy.py
+  - pyformat --in-place pyfancy/demo.py
