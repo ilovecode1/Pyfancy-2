@@ -92,7 +92,7 @@ class pyfancy:
 
     def read(self, file):
         f = open(file, 'r')
-        self.out += f.read()
+        self.parse(f.read())
         f.close()
         return self
 
