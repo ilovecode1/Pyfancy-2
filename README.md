@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/ilovecode1/Pyfancy-2.svg?branch=master)](https://travis-ci.org/ilovecode1/Pyfancy-2)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Filovecode1%2FPyfancy-2.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Filovecode1%2FPyfancy-2?ref=badge_shield)
 
 ### Download
 Go to the [releases page](https://github.com/ilovecode1/Pyfancy-2/releases) and download the latest (or previous) version.
@@ -91,6 +92,9 @@ In order to use pyfancy, import the module with `from pyfancy import *`.
 
 ### License
 Pyfancy-2 is under the MIT license.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Filovecode1%2FPyfancy-2.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Filovecode1%2FPyfancy-2?ref=badge_large)
 
 ### Contributors
 
