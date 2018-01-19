@@ -4,6 +4,8 @@
 ### Download
 Go to the [releases page](https://github.com/ilovecode1/Pyfancy-2/releases) and download the latest (or previous) version.
 
+Or use pip `pip install git+https://github.com/ilovecode1/Pyfancy-2/`
+
 ### Overview
 pyfancy is a simple Python library that provides a mechanism for easily styling text in some terminal environments. Text is styled by chaining together methods that add escape codes for color modifiers to the text.
 
