@@ -1,4 +1,4 @@
-from pyfancy import *
+from pyfancy import pyfancy
 
 pyfancy().red("Hello").raw(", ").blue("world!").output()
 pyfancy().multi("Multicolored text").output()

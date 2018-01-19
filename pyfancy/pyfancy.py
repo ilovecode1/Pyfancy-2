@@ -23,7 +23,8 @@
 
 class pyfancy:
 
-    def __str__(self): return self.get()
+    def __str__(self):
+        return self.get()
 
     def __init__(self, parseText='', obj=''):
         # Stores output text, for reset use get()
