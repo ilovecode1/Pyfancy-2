@@ -2,9 +2,15 @@ language: python
 python:
   - "2.7"
   - "3.6"
-script:
+install:
+  - sudo apt-get install pandoc
   - pip install --upgrade pyformat
+  - pip install pygments
+  - pip install pypandoc
+  - pip install pyroma
+script:
   - python pyfancy/pyfancy.py
   - python pyfancy/demo.py
   - pyformat --in-place pyfancy/pyfancy.py
   - pyformat --in-place pyfancy/demo.py
+  - pyroma .
