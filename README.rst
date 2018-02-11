@@ -163,23 +163,33 @@ Pyfancy-2 is under the MIT license.
 Contributors
 ~~~~~~~~~~~~
 
-Project by [@CosmicWebServices](https://github.com/CosmicWebServices)
+Project by `CosmicWebServices`_
 
-[@TheMonsterFromTheDeep](https://github.com/TheMonsterFromTheDeep)
+`TheMonsterFromTheDeep`_
 
-[@joker314](https://github.com/joker314)
+`joker314`_
 
-[@baranskistad](https://github.com/baranskistad)
+`baranskistad`_
 
-[@jonathan50](https://github.com/Jonathan50)
+`jonathan50`_
 
-[@rogersouza](https://github.com/rogersouza)
+`rogersouza`_
 
-[@vutondesign](https://github.com/vutondesign)
+`vutondesign`_
 
-[@cruxicheiros](https://github.com/cruxicheiros)
+`cruxicheiros`_
 
-[@hiccup01](https://github.com/hiccup01)
+`hiccup01`_
+
+.. _CosmicWebServices: https://github.com/CosmicWebServices
+.. _TheMonsterFromTheDeep: https://github.com/TheMonsterFromTheDeep
+.. _joker314: https://github.com/joker314
+.. _baranskistad: https://github.com/baranskistad
+.. _jonathan50: https://github.com/Jonathan50
+.. _rogersouza: https://github.com/rogersouza
+.. _vutondesign: https://github.com/vutondesign
+.. _cruxicheiros: https://github.com/cruxicheiros
+.. _hiccup01: https://github.com/hiccup01
 
 .. |Build Status| image:: https://travis-ci.org/ilovecode1/Pyfancy-2.svg?branch=master
    :target: https://travis-ci.org/ilovecode1/Pyfancy-2
