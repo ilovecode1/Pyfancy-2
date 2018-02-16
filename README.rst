@@ -163,6 +163,8 @@ Pyfancy-2 is under the MIT license.
 Contributors
 ~~~~~~~~~~~~
 
+*Note:* Because v2 was made in a `fork`_ the contribution graph does not truely reflect the contributions made by the bellow contributers.
+
 Project by `CosmicWebServices`_
 
 `TheMonsterFromTheDeep`_
@@ -193,6 +195,7 @@ Project by `CosmicWebServices`_
 .. _cruxicheiros: https://github.com/cruxicheiros
 .. _hiccup01: https://github.com/hiccup01
 .. _Kristinita: https://github.com/Kristinita
+.. _fork: https://github.com/TheMonsterFromTheDeep/pyfancy
 
 .. |Build Status| image:: https://travis-ci.org/ilovecode1/Pyfancy-2.svg?branch=master
    :target: https://travis-ci.org/ilovecode1/Pyfancy-2
