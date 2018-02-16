@@ -181,6 +181,8 @@ Project by `CosmicWebServices`_
 
 `hiccup01`_
 
+`Kristinita`_
+
 .. _CosmicWebServices: https://github.com/CosmicWebServices
 .. _TheMonsterFromTheDeep: https://github.com/TheMonsterFromTheDeep
 .. _joker314: https://github.com/joker314
@@ -190,6 +192,7 @@ Project by `CosmicWebServices`_
 .. _vutondesign: https://github.com/vutondesign
 .. _cruxicheiros: https://github.com/cruxicheiros
 .. _hiccup01: https://github.com/hiccup01
+.. _Kristinita: https://github.com/Kristinita
 
 .. |Build Status| image:: https://travis-ci.org/ilovecode1/Pyfancy-2.svg?branch=master
    :target: https://travis-ci.org/ilovecode1/Pyfancy-2
