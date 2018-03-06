@@ -7,7 +7,7 @@ Go to the `releases
 page <https://github.com/ilovecode1/Pyfancy-2/releases>`__ and download
 the latest (or previous) version.
 
-Or use pip ``pip install git+https://github.com/ilovecode1/Pyfancy-2/``
+Or use pip ``pip install pyfancy``
 
 Overview
 ~~~~~~~~
