@@ -1,5 +1,6 @@
 from pyfancy import pyfancy
 
+pyfancy().clear()
 pyfancy().red("Hello").raw(", ").blue("world!").output()
 pyfancy().multi("Multicolored text").output()
 pyfancy().rainbow("Rainbow text").output()
@@ -14,4 +15,5 @@ pyfancy().cyan_bg("Cyan background").output()
 pyfancy().black().gray_bg("Gray background").output()
 pyfancy().read("pyfancy/demo/import.txt").output()
 pyfancy().red("This should not be seen!").reset().output()
+pyfancy().blue("this").next().red("and").next(3).green("that")
 print(pyfancy().red("Hello").raw(", ").blue("world!").strip())
