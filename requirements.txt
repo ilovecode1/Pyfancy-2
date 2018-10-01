@@ -1,1 +1,6 @@
 pip==9.0.1
+pyformat==0.7
+pygments==2.2.0
+pypandoc==1.4
+pyroma==2.4
+ddt==1.2.0
