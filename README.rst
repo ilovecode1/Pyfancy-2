@@ -96,7 +96,7 @@ For parsing you can also import from a text file:
     pyfancy().open("import.txt").output()
 
 In order to use pyfancy, import the module with
-``from pyfancy import *``.
+``from pyfancy.pyfancy import pyfancy``.
 
 Types of effects
 ~~~~~~~~~~~~~~~~
