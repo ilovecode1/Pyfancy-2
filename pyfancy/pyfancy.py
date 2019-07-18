@@ -1,25 +1,11 @@
-# Provides methods for manipulating text styling in specific terminals.
-# Uses a basic chaining method where text properties are added by calling
-# methods with related names.
+# Pyfancy 3.dev
 #
-# For example, to print "Hello, world!" in red:
-#   print pyfancy().red("Hello, world!").get()
+# Pyfancy 3 will allow not only focus on terminal color styling
+# but become the one stop shop for terminal interactions.
 #
-# Styles can be changed for different text components. Example:
-#   print pyfancy().red("Hello").raw(", ").blue("world!").get()
-#
-# No output text is necessary when calling a styling method. This allows
-# styles to be stacked:
-#   print pyfancy().red().bold("Hello, world!").get()
-#
-# There are two provided ways to access the modified text. The first is
-# direct access to the string object called "out". However, accessing this
-# object will not reset the style, so any text outputted after will have
-# the same style as whatever the text was at the end of the chain.
-#
-# The get() method is better for accessing text because it resets the text
-# style so no new text will have unwanted styling.
+# Join the discussion: https://github.com/ilovecode1/Pyfancy-2/issues/51
 
+import os
 
 class pyfancy:
 
@@ -96,6 +82,18 @@ class pyfancy:
         self.parse(f.read())
         f.close()
         return self
+    
+    def next(self, times=1):
+        self.out += ('\n' * times)
+        return self
+    
+    def clear(self):
+        if os.name == "posix":
+            os.system('clear')
+        elif os.name in ("nt", "dos", "ce"):
+            os.system('CLS')
+        else:
+            print('\n' * 100)
 
     def reset(self):
         self.out = ''
@@ -191,7 +189,7 @@ class pyfancy:
         i = 31  # ID of escape code; starts at 31 (red) and goes to 36 (cyan)
         for c in string:  # Iterate through string
             self.out += '\033[' + str(i) + 'm' + c
-            i += 1  # Why u no have ++i? >:(
+            i += 1
             if(i > 36):
                 i = 31
         return self
@@ -199,7 +197,6 @@ class pyfancy:
 # Adds a formatting function to pyfancy with the specified name
 # and formatting code
 # This shouldn't be exported
-
 
 def _add(name, number):
     def inner(self, addition=''):
